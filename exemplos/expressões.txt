@@ -69,3 +69,14 @@ Atividade:
 
 Resposta:
 [a-z?*+]+
+
+Atividade:
+O username precisa ser da seguinte forma:
+
+O limite é de 10 caracteres;
+O primeiro caractere deve ser uma letra do alfabeto, não pode ser um número;
+A partir do segundo caractere podemos ter letras maiúsculas, minúsculas e números;
+Como deve ficar a anotação @Pattern com uma expressão regular com essas características?
+
+Resposta:
+[a-zA-Z][a-zA-Z0-9]{0,9}
