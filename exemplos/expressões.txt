@@ -44,3 +44,28 @@ No <code>for</code>, o valor de <code>i</code> começa de zero e é incrementado
 
 Resposta:
 </?code>
+
+Atividade:
+KMG-8089 (placa de carro)
+
+Resposta:
+Placa de carro: [\w\W]{3}-\d{4}
+
+Atividade:
+9.8 - Robson, 7.1 - Teresa, 4.5 - Armênio, 6.5 - Zulu, 7.7 - Stefania, 7.8 - João, 5.0 - Romeu, 7.2 - Pompilho, 3.1 - Reinaldo, 7.3 - Bernadete, 4.7 - Cinério
+10 - Bruce, 9.5 - Miranda, 7.9    - Bob, 10 - Zimbabue, 7.5 - Bety
+
+Resposta:
+[7-9]\.[5-9]\s+-\s+\w+
+
+Atividade:
+BALEIRO GARROTE SERROTE GOLEIRO ROTEIRO
+
+Resposta:
+[A-Z]*ROT[A-Z]+
+
+Atividade:
+?classes+poderosas*
+
+Resposta:
+[a-z?*+]+
