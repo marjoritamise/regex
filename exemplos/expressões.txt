@@ -2,20 +2,19 @@ Básicas: https://tableless.com.br/o-basico-sobre-expressoes-regulares/
 
 Expressões:
 \d = digito de [0-9]
-\s ou \s+ = 1 ou mais spaces
+\s ou \s+ = 1 ou mais spaces (é um atalho para [\t\r\n\f])
 \. = ponto literal
+\w = [A-Za-z_0-9] mas sem acentos ou caracteres especiais (word char)
+\b = (word boundary)
+^ = início da expressão
+$ = fim da expressão
 
 Classes de letras:
 [A-Z] significa de A até Z, sempre maiúscula.
 [a-z] significa de a até z, sempre minúscula,
 [A-Za-z] significa A-Z ou a-z.
 [abc] significa a, b ou c.
-
-Atalhos para as classes mais comuns:
-A classe \w recupera todos os caracteres alpha numericos, ou seja, letras e números, mas não acentos ou caracteres especiais. É o equivalente a [a-zA-Z_0-9]
-A classe \W pega TODOS os caracteres que não seja alpha numericos, ou seja, pontuações e espaços.
-A classe \s é o equivalente [ \t\n\x0B\f\r]
-A classe \d é o equivalente [0-9]
+[123] significa 1, 2 ou 3.
 
 Regex Quantifiers:
 ? - zero ou uma vez.
@@ -24,6 +23,12 @@ Regex Quantifiers:
 {n} - exatamente n vezes.
 {n,} - no mínimo n vezes.
 {n,m} - no mínimo n vezes, no máximo m vezes.
+
+(Word boundary)
+O que queremos na verdade é encontrar o início e o fim de uma palavra, que podemos definir pela regex \b. \b é uma das âncoras, chamada de word boundary. Uma âncora não seleciona um caractere, ela seleciona apenas uma posição no texto alvo. Ou seja, a âncora \b sozinha devolve nada (zero-length) mas combinada com um valor literal, ou outra regex, podemos finalmente definir como encontrar a preposição.
+
+___________________________________________________________________
+
 
 Atividade:
 João Fulano,123.456.789-00,21 de Maio de 1993,(21) 3079-9987,Rua do Ouvidor,50,20040-030,Rio de Janeiro
@@ -80,3 +85,10 @@ Como deve ficar a anotação @Pattern com uma expressão regular com essas carac
 
 Resposta:
 [a-zA-Z][a-zA-Z0-9]{0,9}
+
+Atividade:
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Respostas:
+^Caused by:.*
+^Caused by:\s+\w.
